@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            margin: auto;
+            position: relative;
+            max-width: 67.5rem;
+            max-height: 120rem;
+            overflow: auto;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        .wrapper {
+            position: inherit;
+            max-width: inherit;
+            max-height: inherit;
+            overflow: inherit;
+
+            width: 100%;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 3rem;
+            text-align: center;
+            font-size: 3.5rem;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 1rem;
+
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            flex-grow: 1;
+            font-size: 2rem;
+            line-height: 5rem;
+        }
+        .nav a.active {
+            background-color: #4CAF50;
+            border-radius: 0.3125rem;
+        }
+        .container {
+            padding: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        .card {
+            background-color: white;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+            border-radius: 2rem;
+        }
+
+        .card:active {
+            background-color: #82b984;
+        }
+
+        .card h3 {
+            margin-bottom: 0.625rem;
+            color: #333;
+            font-size: 2.5rem;
+        }
+
+        .card:active h3 {
+            color: #fff;
+        }
+
+        .card p {
+            color: #777;
+            font-size: 2rem;
+        }
+
+        .card:active p {
+            color: #fff;
+        }
+
+        .image-01 {
+            width: 40rem;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .bubble a {
+            position: absolute;
+            right: 3rem;
+            top: -11rem;
+            color: white;
+            text-decoration: none;
+            flex-grow: 1;
+            font-weight: 700;
+            font-size: 3rem;
+            padding: 2.75rem 4rem ;
+            border-radius: 50rem;
+            background-color: #4CAF50;
+        }
+
+        .bottom-element {
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .scroll-container {
+            width: 100%;
+            overflow-x: auto; /* Enable horizontal scrolling */
+            white-space: nowrap; /* Prevent items from wrapping to next line */
+            padding: 1.5rem;
+            scroll-behavior: smooth; /* Smooth scrolling effect */
+        }
+
+        .scroll-container::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for better UX */
+        }
+
+        .s-card {
+            display: inline-block;
+            width: 30rem;
+            height: 20rem;
+            margin-right: 2rem;
+            background-color: #ddd;
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            vertical-align: top;
+            font-size: 3rem;
+        }
+
+        .card:last-child {
+            margin-right: 0; /* Remove margin from last card */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="header">
+            Dashboard
+        </div>
+
+        <div class="scroll-container">
+            <div class="s-card">Card 1</div>
+            <div class="s-card">Card 2</div>
+            <div class="s-card">Card 3</div>
+            <div class="s-card">Card 4</div>
+            <div class="s-card">Card 5</div>
+            <div class="s-card">Card 6</div>
+            <div class="s-card">Card 7</div>
+        </div>
+
+        <div class="container">
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Total Sales</h3>
+                    <p>$12,300</p>
+                </div>
+                <div class="card">
+                    <h3>New Users</h3>
+                    <p>150</p>
+                </div>
+                <div class="card">
+                    <h3>Pending Orders</h3>
+                    <p>23</p>
+                </div>
+                <div class="card">
+                    <h3>Messages</h3>
+                    <p>5 unread messages</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center" style="margin-bottom: 2rem;">
+            <img class="image-01" src="https://images.pexels.com/photos/27947532/pexels-photo-27947532/free-photo-of-woman-with-food-on-a-picnic.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+        </div>
+
+        <div class="container" style="margin-bottom: 15rem;">
+            <h1>Demo of a 9:16 Aspect Ratio Scaling Effect</h1>
+
+            <p>This webpage demonstrates a scaling effect that maintains a 9:16 aspect ratio. It dynamically adjusts to fit both the width and height of your device's screen. </p>
+
+            <p>It works just an image, but it's not static. This page remains interactive and responsive, adapting its layout as the device's dimensions change.</p>
+        </div>
+
+        <div class="bottom-element">
+            <div class="bubble">
+                <a href="#">i</a>
+            </div>
+
+            <div class="nav">
+                <a href="#" class="active">Home</a>
+                <a href="#">Stats</a>
+                <a href="#">Settings</a>
+                <a href="#">Profile</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function setRootFontSize() {
+            const minFontSize = 1;  // Minimum font size in px
+            const maxFontSize = 16; // Maximum font size in px
+            const baseWidth = 1080; // Reference width for scaling
+            const baseHeight = 1920; // Reference height for scaling (for 9:16 ratio)
+
+            // Get the viewport width and height
+            let viewportWidth = window.innerWidth;
+            let viewportHeight = window.innerHeight;
+
+            // Calculate the dynamic font size based on a percentage of viewport width and height
+            let dynamicFontSizeWidth = (viewportWidth / baseWidth) * 16;   // Scale font based on width
+            let dynamicFontSizeHeight = (viewportHeight / baseHeight) * 16; // Scale font based on height
+
+            // Choose the smaller of the two values to maintain the 9:16 ratio
+            let dynamicFontSize = Math.min(dynamicFontSizeWidth, dynamicFontSizeHeight);
+
+            // Clamp the font size between min and max
+            dynamicFontSize = Math.min(Math.max(dynamicFontSize, minFontSize), maxFontSize);
+
+            // Set the root font size dynamically
+            document.documentElement.style.fontSize = dynamicFontSize + 'px';
+        }
+
+        // Set the initial font size
+        setRootFontSize();
+
+        // Update the font size whenever the window is resized
+        window.addEventListener('resize', setRootFontSize);
+    </script>
+
+    <script type="text/javascript">
+    // When ready...
+    window.addEventListener("load",function() {
+       // Set a timeout...
+       setTimeout(function(){
+          // Hide the address bar!
+          window.scrollTo(0, 1);
+       }, 0);
+    });
+    </script>
+
+
+
+</body>
+</html>
